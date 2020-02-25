@@ -40,9 +40,21 @@ const server = http.createServer(function(request, response) {
         });
    }
    //serve images for cats page
-
-   //serve page for form
-   
+   else if (request.url === '/images/image here') {
+        fs.readFile('/images/image here', function(errors, contents){
+            response.writeHead(200, {'Content-type': 'image/jpg'});
+            response.write(contents);
+            response.end();
+        })
+    }
+   //serve page for cars form
+   else if (request.url === "/cars/new") {
+        fs.readFile('./views/newcar.html', 'utf8', (errors, contents) => {
+            response.writeHead(200, {'Content-type': 'text/html'});
+            response.write(contents); 
+            response.end();
+        });
+    }
     else {
         response.end('File not found!!!');
     }
