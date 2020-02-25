@@ -39,6 +39,10 @@ const server = http.createServer(function(request, response) {
             response.end();
         });
    }
+   //serve images for cats page
+
+   //serve page for form
+   
     else {
         response.end('File not found!!!');
     }
