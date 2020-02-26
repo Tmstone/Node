@@ -31,6 +31,20 @@ const server = http.createServer(function(request, response) {
             response.end();
         })
     }
+    else if (request.url === '/images/image here') {
+        fs.readFile('/images/image here', function(errors, contents){
+            response.writeHead(200, {'Content-type': 'image/jpg'});
+            response.write(contents);
+            response.end();
+        })
+    }
+    else if (request.url === '/images/image here') {
+        fs.readFile('/images/image here', function(errors, contents){
+            response.writeHead(200, {'Content-type': 'image/jpg'});
+            response.write(contents);
+            response.end();
+        })
+    }
     //serve cats
     else if (request.url === "/cats") {
         fs.readFile('./views/cats.html', 'utf8', (errors, contents) => {
@@ -41,6 +55,20 @@ const server = http.createServer(function(request, response) {
    }
    //serve images for cats page
    else if (request.url === '/images/image here') {
+        fs.readFile('/images/image here', function(errors, contents){
+            response.writeHead(200, {'Content-type': 'image/jpg'});
+            response.write(contents);
+            response.end();
+        })
+    }
+    else if (request.url === '/images/image here') {
+        fs.readFile('/images/image here', function(errors, contents){
+            response.writeHead(200, {'Content-type': 'image/jpg'});
+            response.write(contents);
+            response.end();
+        })
+    }
+    else if (request.url === '/images/image here') {
         fs.readFile('/images/image here', function(errors, contents){
             response.writeHead(200, {'Content-type': 'image/jpg'});
             response.write(contents);
